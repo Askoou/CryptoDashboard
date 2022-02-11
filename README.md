@@ -24,8 +24,8 @@ INSTALLATION :
   - Par defaut, la DB sera cryptobot
 
 - Ajouter une ligne dans votre crontab pour lancer recap.py tout les jours
-0 5 * * * python3 cBot-Project/live_strategy/Recap.py
-Vous pouvez remplacer le 5 par l'heure que vous voulez
+  - 0 5 * * * python3 cBot-Project/live_strategy/Recap.py
+
 
 
 
@@ -33,14 +33,14 @@ Vous pouvez remplacer le 5 par l'heure que vous voulez
       FAQ
 ################
 
-Q: Impossible de me connecter à ma DB via index.php
-R: Vérifier de bien avoir rentrer toute les informations de connexion dans script.php
+- Q: Impossible de me connecter à ma DB via index.php
+  - R: Vérifier de bien avoir rentrer toute les informations de connexion dans script.php
 
-Q: Impossible de me connecter à ma DB via python
-R: Vérifier de bien avoir rentrer toute les informations de connexion dau début des différents fichiers
+- Q: Impossible de me connecter à ma DB via python
+  - R: Vérifier de bien avoir rentrer toute les informations de connexion dau début des différents fichiers
 
-Q: Erreur de connexion SQL ou délai dépassé avec AWS EDS
-R: Penser à whitelister votre adresse IP et l'adresse Ip du serveur oú votre bot est hébergé dans les règles entrantes de votre Security group
+- Q: Erreur de connexion SQL ou délai dépassé avec AWS EDS
+  - R: Penser à whitelister votre adresse IP et l'adresse Ip du serveur oú votre bot est hébergé dans les règles entrantes de votre Security group
 
-Q: Qu'est ce que AWS EDS, AWS EC2, Wamp, ...
-R: Google :)
+- Q: Qu'est ce que AWS EDS, AWS EC2, Wamp, ...
+  - R: Google :)
