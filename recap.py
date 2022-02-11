@@ -11,7 +11,7 @@ import time
 host =""
 user =""
 password =""
-db = ""
+db = "cryptobot"
 
 now = datetime.now()
 date = now.strftime("%Y-%m-%d")
