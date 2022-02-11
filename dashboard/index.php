@@ -1,17 +1,23 @@
 <?php require 'script.php'; ?>
-
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/modules/annotations.js"></script>
+<script src="https://code.highcharts.com/stock/modules/data.js"></script>
+<script src="highcharts.js"> </script>
 <link rel="stylesheet" href="style.css">
 
 <div class="main"> 
   <h1>Tableau de bord</h1>
   <h2><?php echo $todayPrice. " $"; ?> </h2>
   <div style="display:flex;justify-content:space-evenly;margin-top:50px;" >
-    <div class="section"><b>Daily :</b> <?php if($evoDay >! 0) {echo '<span class="HighlightGreen">'.$evoDay.'</span>';} else {echo '<span class="HighlightRed">'.$evoDay.'</span>';} ?></div>
-    <div class="section"><b>Weekly :</b> <?php if($evoWeek >! 0) {echo '<span class="HighlightGreen">'.$evoWeek.'</span>';} else {echo '<span class="HighlightRed">'.$evoWeek.'</span>';} ?></div>
-    <div class="section"><b>Monthly :</b> <?php if($evoMonth >! 0) {echo '<span class="HighlightGreen">'.$evoMonth.'</span>';} else {echo '<span class="HighlightRed">'.$evoMonth.'</span>';} ?></div>
+    <div class="section"><b>Daily :</b> <?php if($evoDay > 0) {echo '<span class="HighlightGreen"> '. $evoDay.' %</span>';} else {echo '<span class="HighlightRed"> '. $evoDay.' %</span>';} ?></div>
+    <div class="section"><b>Weekly :</b> <?php if($evoWeek > 0) {echo '<span class="HighlightGreen"> '.$evoWeek.'</span>';} else {echo '<span class="HighlightRed"> '.$evoWeek.'</span>';} ?></div>
+    <div class="section"><b>Monthly :</b> <?php if($evoMonth > 0) {echo '<span class="HighlightGreen"> '.$evoMonth.'</span>';} else {echo '<span class="HighlightRed"> '.$evoMonth.'</span>';} ?></div>
   </div>
   <div class="graph">
-    <h2>Graphique</h2> 
+    <h2>Graphique</h2>
+<div id="container"></div>
+
+
   </div>
   <div class="orderBook">
     <h2>Carnet d'ordres</h2>
