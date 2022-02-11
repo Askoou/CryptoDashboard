@@ -15,6 +15,10 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM orderBook ORDER BY id LIMIT 10";
 $result = $conn->query($sql);
 
+// GRAPHIQUE
+$sql3 = "SELECT * FROM afg20 ORDER BY id";
+$result3 = $conn->query($sql3);
+
 
 // HISTORICAL WALLET
 $sql2 = "(SELECT * FROM afg20
@@ -33,13 +37,13 @@ while($rowPrice = $result2->fetch_assoc()) {
         }
 
 // Calcul des % d'evo
-if (isset($yestPrice)) { $evoDay = (($todayPrice - $yestPrice) * 100) / $yestPrice . ' %';}
+if (isset($yestPrice)) { $evoDay = (($todayPrice - $yestPrice) * 100) / $yestPrice; $evoDay = number_format($evoDay,2);}
 else {$evoDay = 'Manque de données';}
 
-if (isset($monthPrice)) {$evoWeek = (($todayPrice - $weekPrice) * 100) / $weekPrice . " %";}
+if (isset($monthPrice)) {$evoWeek = (($todayPrice - $weekPrice) * 100) / $weekPrice;$evoWeek = number_format($evoWeek,2);}
   else {$evoWeek = 'Manque de données';}
 
-if (isset($monthPrice)) {$evoMonth = (($todayPrice - $monthPrice) * 100) / $monthPrice . " %";}
+if (isset($monthPrice)) {$evoMonth = (($todayPrice - $monthPrice) * 100) / $monthPrice;$evoMonth = number_format($evoMonth,2);}
   else {$evoMonth = 'Manque de données';}
 
 
