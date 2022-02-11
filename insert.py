@@ -7,7 +7,7 @@
                   host="",
                   user="",
                   password="",
-                  database=""
+                  database="cryptobot"
                 )
                 mycursor = mydb.cursor()
                 
