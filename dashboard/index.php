@@ -47,7 +47,7 @@ function change_onglet(name) {
   change_onglet(anc_onglet);
 </script>
 
-<!-- Script affichage du graph -->
+<!-- Script affichage du graph  -->
 <script>
 Highcharts.chart('container', {
 
