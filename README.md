@@ -15,7 +15,7 @@ INSTALLATION :
   - Par defaut, la DB sera cryptobot
 
 - Mise en place de la DB :
-  - Copier coller le code SQL de InstallTable.sql sur votre serveur EDS (ou autre serveur SQL).
+  - Copier coller le code SQL de InstallDB.sql sur votre serveur EDS (ou autre serveur SQL).
   - Répéter l'étape pour chacun de vos bot en pensant à modifier le chiffre. 
   - Vous devez avoir 2 table par bot : orderBook et Bot.
 
