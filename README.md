@@ -1,4 +1,5 @@
-# CryptoRecap
+# CryptoRecap V 2.0
+
 
 CONFIGURATION RECOMMANDEE :
 - Serveur AWS EC2 (offre gratuite) ou autre pour faire tourner vos bots
@@ -13,14 +14,17 @@ INSTALLATION :
 - Remplir les infos de connexion à la DB dans le fichier script.php
   - Par defaut, la DB sera cryptobot
 
-- Installer la DB en copie-collant les requêtes SQL sur votre serveur EDS (ou autre serveur SQL)
+- Mise en place de la DB :
+  - Copier coller le code SQL de InstallTable.sql sur votre serveur EDS (ou autre serveur SQL).
+  - Répéter l'étape pour chacun de vos bot en pensant à modifier le chiffre. 
+  - Vous devez avoir 2 table par bot : orderBook et Bot.
 
 - Placer le fichier recap.py dans le dossier live strategy sur le serveur oú votre bot est hebergé.
-- Remplir les infos de connexion à la DB dans le fichier script.php
+- Penser à remplir les infos de connexion à la DB
   - Par defaut, la DB sera cryptobot
 
 - Inserer les morceaux de code dans le fichier de votre bot actif
-- Remplir les infos de connexion à la DB dans le fichier script.php
+- Penser à remplir les infos de connexion à la DB
   - Par defaut, la DB sera cryptobot
 
 - Ajouter une ligne dans votre crontab pour lancer recap.py tout les jours
